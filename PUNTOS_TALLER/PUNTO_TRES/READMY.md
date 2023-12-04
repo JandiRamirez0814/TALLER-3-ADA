@@ -22,11 +22,12 @@ La forma en que se mostrará en la terminal es la siguiente:
 
 `Tamaño del arreglo: entrada`
 
-`Moda del algoritmo construido: moda`
+`Tiempo de Ordenamiento por Inserción: tiempo segundos, complejidad: valor, constante: valor de la constante`
 
-`Moda de la función multimode: moda`
+`Tiempo de Ordenamiento por Fusión: tiempo segundos, complejidad: valor, constante: valor de la constante`
+
+`Tiempo de Ordenamiento Rápido: tiempo segundos, complejidad: valor, constante: valor de la constante`
 
 #####ejemplo:
-[![ejemplo](https://photos.app.goo.gl/h7n9xNeUGPRHt1eL8 "ejemplo")](https://photos.app.goo.gl/h7n9xNeUGPRHt1eL8 "ejemplo")
-
+[![part1](https://photos.app.goo.gl/n41B2eQ8wdYgh8WV7 "part1")](https://photos.app.goo.gl/n41B2eQ8wdYgh8WV7 "part1")[![part2](https://photos.app.goo.gl/LFwcB9naG8ckNNDN9 "part2")](https://photos.app.goo.gl/LFwcB9naG8ckNNDN9 "part2")
 Si se ejecuta nuevamente el comando, se generara la misma prueba nuevamente con números diferentes en las listas.
