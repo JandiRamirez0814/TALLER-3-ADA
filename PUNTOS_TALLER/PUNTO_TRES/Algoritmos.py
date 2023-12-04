@@ -1,5 +1,6 @@
 import time
 import random
+import math
 
 def ordenamiento_insercion(arr):
     for i in range(1, len(arr)):
@@ -60,9 +61,9 @@ def ejecutar_experimento(tamano_arreglo):
     tiempo_rapido = medir_tiempo(ordenamiento_rapido, arr.copy())
     # Imprimir los resultados
     print(f"Tamaño del Arreglo: {tamano_arreglo}")
-    print(f"Tiempo de Ordenamiento por Inserción: {tiempo_insercion:.6f} segundos")
-    print(f"Tiempo de Ordenamiento por Fusión: {tiempo_fusion:.6f} segundos")
-    print(f"Tiempo de Ordenamiento Rápido: {tiempo_rapido:.6f} segundos")
+    print(f"Tiempo de Ordenamiento por Inserción: {tiempo_insercion:.6f} segundos, complejidad: "+str(tamano_arreglo**2))
+    print(f"Tiempo de Ordenamiento por Fusión: {tiempo_fusion:.6f} segundos, complejidad: "+str(tamano_arreglo*(math.log(tamano_arreglo))))
+    print(f"Tiempo de Ordenamiento Rápido: {tiempo_rapido:.6f} segundos, complejidad: "+str(tamano_arreglo*(math.log(tamano_arreglo))))
     print()
 
 # Ejecutar experimentos para diferentes tamaños de arreglos

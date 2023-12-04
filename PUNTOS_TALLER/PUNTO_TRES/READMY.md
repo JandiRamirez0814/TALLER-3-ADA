@@ -22,11 +22,11 @@ La forma en que se mostrará en la terminal es la siguiente:
 
 `Tamaño del arreglo: entrada`
 
-`Tiempo de Ordenamiento por Inserción: tiempo segundos, complejidad: valor, constante: valor de la constante`
+`Tiempo de Ordenamiento por Inserción: tiempo segundos, complejidad: valor`
 
-`Tiempo de Ordenamiento por Fusión: tiempo segundos, complejidad: valor, constante: valor de la constante`
+`Tiempo de Ordenamiento por Fusión: tiempo segundos, complejidad: valor`
 
-`Tiempo de Ordenamiento Rápido: tiempo segundos, complejidad: valor, constante: valor de la constante`
+`Tiempo de Ordenamiento Rápido: tiempo segundos, complejidad: valor`
 
 #####ejemplo:
 [![part1](https://photos.app.goo.gl/n41B2eQ8wdYgh8WV7 "part1")](https://photos.app.goo.gl/n41B2eQ8wdYgh8WV7 "part1")[![part2](https://photos.app.goo.gl/LFwcB9naG8ckNNDN9 "part2")](https://photos.app.goo.gl/LFwcB9naG8ckNNDN9 "part2")
