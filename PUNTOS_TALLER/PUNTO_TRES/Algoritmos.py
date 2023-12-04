@@ -1,75 +1,82 @@
 import random
-import numpy as np
+import time
 
-#pido un numero para generar un arreglo aleatorio
-num= int(input("Tamaño del arreglo: "))
-    
-#Algoritmos de ordenamiento Quicksort
-def quickSort(list):
-    if len(list) <= 1:
-        return list
-    pivote = list[len(list) // 2]
-    left = [x for x in list if x < pivote]
-    division = [x for x in list if x == pivote]
-    right = [x for x in list if x > pivote]
-    return quickSort(left) + division + quickSort(right)
 
-#Algoritmo de ordenamiento InsertionSort
-def insertionSort(arr):
+def insertion_sort(arr):
     for i in range(1, len(arr)):
         key = arr[i]
         j = i - 1
-        while j >= 0 and arr[j] > key:
+        while j >= 0 and key < arr[j]:
             arr[j + 1] = arr[j]
-            j = j - 1
+            j -= 1
         arr[j + 1] = key
-    return arr
 
-#Algoritmo de ordenamiento MergeSort
-def merge(left, right):
-    result = []
-    i = j = 0
-    while i < len(left) and j < len(right):
-        if left[i] <= right[j]:
-            result.append(left[i])
+
+def merge_sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        left_half = arr[:mid]
+        right_half = arr[mid:]
+
+        merge_sort(left_half)
+        merge_sort(right_half)
+
+        i = j = k = 0
+
+        while i < len(left_half) and j < len(right_half):
+            if left_half[i] < right_half[j]:
+                arr[k] = left_half[i]
+                i += 1
+            else:
+                arr[k] = right_half[j]
+                j += 1
+            k += 1
+
+        while i < len(left_half):
+            arr[k] = left_half[i]
             i += 1
-        else:
-            result.append(right[j])
+            k += 1
+
+        while j < len(right_half):
+            arr[k] = right_half[j]
             j += 1
-    while i < len(left):
-        result.append(left[i])
-        i += 1
-    while j < len(right):
-        result.append(right[j])
-        j += 1
-    return result
-
-def mergeSort(list):
-    if len(list) <= 1:
-        return list
-    mitad = len(list) // 2
-    left = mergeSort(list[:mitad])
-    right = mergeSort(list[mitad:])
-    return merge(left, right)
+            k += 1
 
 
-lista= [0]*num
-for i in range(num):
-    lista[i] = random.randint(1, num)
-    
-other= np.sort(lista, kind='quicksort')
-print("\nQuickSort: "+str(quickSort(lista))+ "\nQuickSort de numpy: "+str(other)+"\n")
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quick_sort(left) + middle + quick_sort(right)
 
 
-lista2= [0]*num
-for i in range(num):
-    lista2[i] = random.randint(1, num)
-    
-print("InsertionSort: "+str(insertionSort(lista2))+"\n")  
+def measure_time(algorithm, arr):
+    start_time = time.time()
+    algorithm(arr)
+    end_time = time.time()
+    return end_time - start_time
 
-lista3= [0]*num
-for i in range(num):
-    lista3[i] = random.randint(1, num)
-    
-other2= np.sort(lista3, kind='mergesort')
-print("MergeSort: "+str(mergeSort(lista3))+ "\nMergeSort de numpy: "+str(other2))
+
+def run_experiment(array_size):
+    arr = [random.randint(1, 1000) for _ in range(array_size)]
+
+    # Run the algorithms and measure time
+    insertion_time = measure_time(insertion_sort, arr.copy())
+    merge_time = measure_time(merge_sort, arr.copy())
+    quick_time = measure_time(quick_sort, arr.copy())
+
+    # Print the results
+    print(f"Array Size: {array_size}")
+    print(f"Insertion Sort Time: {insertion_time:.6f} seconds")
+    print(f"Merge Sort Time: {merge_time:.6f} seconds")
+    print(f"Quick Sort Time: {quick_time:.6f} seconds")
+    print()
+
+
+# Run experiments for different array sizes
+array_sizes = [10, 50, 100, 500, 1000, 2000, 5000, 10000]
+for size in array_sizes:
+    run_experiment(size)
