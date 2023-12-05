@@ -12,6 +12,7 @@ En base a lo requerido en el taller presentado por el [profesor](https://github.
 - statistics
 - numpy
 - time
+- math
 
 ###Ejecución:
 Una vez descargado el proyecto al ubicarse en cada archivo **.py** basta con dar click en el boton **run** para ejecutar cada archivo donde se encuentra la implementación requerida y una vez ejecutado en la terminal se muestran las pruebas con diferentes tamaños de entrada de cada algoritmo.

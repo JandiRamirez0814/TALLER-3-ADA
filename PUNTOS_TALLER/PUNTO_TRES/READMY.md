@@ -31,3 +31,26 @@ La forma en que se mostrará en la terminal es la siguiente:
 #####ejemplo:
 [![part1](https://photos.app.goo.gl/n41B2eQ8wdYgh8WV7 "part1")](https://photos.app.goo.gl/n41B2eQ8wdYgh8WV7 "part1")[![part2](https://photos.app.goo.gl/LFwcB9naG8ckNNDN9 "part2")](https://photos.app.goo.gl/LFwcB9naG8ckNNDN9 "part2")
 Si se ejecuta nuevamente el comando, se generara la misma prueba nuevamente con números diferentes en las listas.
+
+También hay un archivo que muestra las comparaciones tomando 3 muestras por el valor del tamaño de la entrada(tamaño del arreglo), mostrando:
+- Entrada
+- Tiempo de ejecución
+- Complejidad
+- Constante
+
+###Ejecución:
+Una vez descargado el proyecto y ubicado en la terminal dentro de la carpeta "PROYECTO 3 ADA" se puede ejecutar el comando:
+
+> python PUNTOS_TALLER\PUNTO_TRES\tablas_comparacion.py
+
+La forma en que se mostrará en la terminal es la siguiente:
+
+`TAMAÑO ENTRADA  TIEMPO ORDENAMIENTO (ALGORITMO)  COMPLEJIDAD (ALGORITMO) CONSTANTE (ALGORITMO)`
+`valor              valor                            valor                  valor  `
+`valor              valor                            valor                  valor  `
+`valor              valor                            valor                  valor  `
+
+#####ejemplo:
+[![ejemplo1](https://photos.app.goo.gl/x3cZYjtakSMDYpyj8 "ejemplo1")](https://photos.app.goo.gl/x3cZYjtakSMDYpyj8 "ejemplo1")
+[![ejemplo2](https://photos.app.goo.gl/DDpu7K21rAdcUygLA "ejemplo2")](https://photos.app.goo.gl/DDpu7K21rAdcUygLA "ejemplo2")
+[![ejemplo3](https://photos.app.goo.gl/zPJkvrgnxLzoE5oU9 "ejemplo3")](https://photos.app.goo.gl/zPJkvrgnxLzoE5oU9 "ejemplo3")
